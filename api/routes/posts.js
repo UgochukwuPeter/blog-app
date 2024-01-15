@@ -44,20 +44,16 @@ router.delete("/:id",verify, async(req, res)=>{
        }
 });
 //GET ALL POST
-router.get("/", verify, async (req, res) => {
-    if (req.user.isAdmin) {
-        try {
-            const posts = await Post.find();
-            res.status(200).json(posts.reverse());
-        } catch (err) {
-            res.status(500).json(err);
-        }
-    } else {
-        res.status(403).json("You are not allowed!");
+router.get("/", async (req, res) => {
+    try {
+        const posts = await Post.find();
+        res.status(200).json(posts.reverse());
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 //GET NEWEST POST
-router.get("/newest", verify, async (req, res) => {
+router.get("/newest", async (req, res) => {
     try {
         const newestPost = await Post.findOne().sort({ _id: -1 });
         res.status(200).json(newestPost);
@@ -68,7 +64,7 @@ router.get("/newest", verify, async (req, res) => {
 
 
 //Fetch Two random post
-router.get("/two", verify, async (req, res) => {
+router.get("/two", async (req, res) => {
     const query = req.query.new;
     try {
         let posts;
@@ -89,7 +85,7 @@ router.get("/two", verify, async (req, res) => {
 
 
 //GET ANY POST
-router.get("/find/:id",verify, async(req, res)=>{
+router.get("/find/:id", async(req, res)=>{
     try{
      const post = await Post.findById(req.params.id);
          res.status(200).json(post);
