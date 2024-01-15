@@ -1,0 +1,71 @@
+@import '../responsive.scss';
+
+.register{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    border: .1rem solid blue;
+    padding: 1rem;
+    border-radius: .7rem;
+    @include  md{
+        width: 60%;
+    }
+    @include sm{
+        width: 80%;
+    }
+    h1{
+        margin-bottom: 2rem;
+        @include sm{
+            font-size: 1.5rem;
+        }
+    }
+    form{
+        width: 100%;
+        .errors{
+            font-size: .7rem;
+            color: crimson;
+            font-style: italic;
+        }
+        input{
+            width: 100%;
+            padding: .7rem;
+            margin: .4rem 0;
+            outline: none;
+            border: none;
+            border-bottom: .1rem  solid blue;
+            background: inherit;
+        }
+        input[type='submit']{
+            background:  blue;
+            color: white;
+            border-radius: .2rem;
+            cursor: pointer;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+            transition: all .4s;
+            &:hover{
+                background: white;
+                color: blue;
+                border: .1rem solid blue;
+            }
+        }
+        .exist{
+            margin: 1rem auto;
+            font-style: italic;
+    
+        }
+    }
+    .login{
+        padding: .6rem;
+        background: blue;
+        color: white;
+        border-radius: 1.5rem;
+        margin-top: 1rem;
+
+    }
+    
+}

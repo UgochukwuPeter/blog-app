@@ -1,0 +1,48 @@
+@import '../responsive.scss';
+
+.create-post{
+    padding: 1rem 2rem;
+    h1{
+        margin: 1rem 0 1.5rem 0;
+        font-size: 1.5rem;
+    }
+    form{
+        width:80%;
+        margin: 0 auto;
+        input[type="text"]{
+            width:100%;
+            margin: 1rem 0;
+            padding: .7rem;
+            outline: none;
+            border: 1px solid grey;
+        }
+        input[type='date']{
+            @include sm{
+                margin-top: 1rem;
+            }
+        }
+        textarea{
+            width:100%;
+            margin-bottom: 1rem;
+            outline:none;
+            border: 1px solid grey;
+            padding:.7rem;
+        }
+        button{
+            width:  30%;
+            padding: 1rem;
+            border: none;
+            outline:none;
+            background: blue;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor:  pointer;
+            letter-spacing: .3rem;
+            @include sm{
+                width: 100%;
+            }
+        }
+    }
+}

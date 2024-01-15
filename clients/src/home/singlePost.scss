@@ -1,0 +1,98 @@
+@import  '../responsive.scss';
+
+.singlePost{
+
+    padding: 1rem  2rem;
+    img{
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        @include  md{
+            height: 20rem;
+        }
+        @include sm{
+            height: 15rem;
+        }
+    }
+    .handle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .date{
+            font-weight: 300;
+            font-style: italic;
+            margin: 1rem 0;
+        }
+    }
+    
+    .title{
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+    .desc{
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+    .comments{
+        margin: 2rem 0;
+        background: rgba(245, 245, 245, 0.5);
+        padding: 1rem;
+        .comments-title{
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: .5rem;
+        }
+        .comment-container{
+            h3{
+                font-size: .8rem;
+            }
+            .comments-desc{
+                margin: .7rem 0;
+                font-size: .7rem;
+
+            }
+        }
+    }
+    .share{
+        font-weight: 600;
+        font-size: .8rem;
+    }
+    form{
+        width: 40%;
+        margin-top: 3%;
+        @include sm{
+            width: 100%; 
+        }
+
+        input[type ='text']{
+            width:  20%;
+            padding: .7rem;
+            outline: none;
+            border: 1px solid grey;
+            border-radius: .2rem;
+            margin-bottom: 1rem;
+            transition: all .4s ease-out;
+            &:focus{
+                width: 100%;
+            }
+        }
+        textarea{
+            width: 100%;
+            outline: none;
+            border: 1px solid grey;
+            padding: .7rem;
+        }
+        input[type ='submit']{
+            width:  100%;
+            padding: .7rem;
+            border: none;
+            background: blue;
+            color: white;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: .2rem;
+        }
+    }
+
+
+}

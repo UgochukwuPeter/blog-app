@@ -1,0 +1,128 @@
+@import '../responsive.scss';
+
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgba(253, 252, 252, 0.3) 50%);
+    
+    &.scrolled{
+        background: white;
+    }
+    .nav-container{
+    padding: 1rem  2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include sm{
+        position: relative;
+    }
+    .nav-logo{
+        font-weight: 700;
+        span{
+            color: blue;
+        }
+    }
+.nav-link{
+    width: 0%;
+    ul{
+        @include sm{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 2.8rem;
+            background: white;
+            padding: 2rem;
+        }
+        .active{
+            // @include sm{
+            //     left: 0;
+            // }
+        }
+     li{
+        list-style-type: none;
+        display: inline;
+        margin:  0 1rem;
+        @include  sm{
+            display: block;
+            margin: 0  0 1rem 0;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            color: blue;
+
+            &:hover{
+                border-bottom: .2rem solid blue;
+            }
+        }
+        
+    }
+    .signout{
+        background: blue;
+        padding: .7rem 1rem;
+        color: white;
+        margin-right: .6rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        display:  none;
+        @include sm{
+            display: block;
+            
+        }
+    }
+    }
+
+}
+.nav-status{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .signout{
+        background: blue;
+        padding: .7rem 1rem;
+        color: white;
+        margin-right: .6rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+.signout{
+    background: blue;
+    padding: .7rem 1rem;
+    color: white;
+    margin-right: .6rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    @include sm{
+        display: none;
+    }
+}
+.hambugger{
+    display: none;
+
+    @include sm{
+        display: block;
+    }
+    .bar{
+        @include sm{
+            background-color: #120f0b;
+            width: 20px;
+            height: 3px;
+            display: block;
+            margin: 5px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+}
+}

@@ -1,0 +1,9 @@
+button{
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.icons{
+    margin: 0 .1rem;
+}
