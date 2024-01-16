@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './social.scss'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Share from './Share';
 
 const Social = () => {

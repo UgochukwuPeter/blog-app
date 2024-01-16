@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './featured.scss';
-import ShortenedTex from './ShortenedText';
+// import ShortenedTex from './ShortenedText';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton'
@@ -11,7 +11,7 @@ const Featured = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('/posts/random', {
+        const response = await axios.get('posts/random', {
           headers: {
             // If you have authentication, include the token here
             // token: "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZiMDBhZTg1NzA3ZmEzNGU3NzUxMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNDM3MzIzNCwiZXhwIjoxNzA2OTY1MjM0fQ.0iO0ldQc9UTu6tYqF7Nzzm8PhhZUe6sX_BrwaxGA-e8"
@@ -26,7 +26,7 @@ const Featured = () => {
   }, []); // Empty dependency array means this effect runs once on mount
   return (
     <div className='featured'>
-        <img src={post.img || <Skeleton/>} alt="" />
+        <img src={post.img || <Skeleton width={500} height={300}/>} alt="" />
         <div className='img-overlay'></div>
         <div className='featured-content'>
         <div className='icon'>

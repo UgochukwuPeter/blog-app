@@ -30,11 +30,11 @@ const BlogPost = ({posts, itemsPerPage }) => {
             {
                 currentPosts.map((post)=>(
             <div key={post._id} className='blog-wrapper'>
-              <img src={post.img || <Skeleton />} alt="" /> 
-              <p className='date'>Date: {post.date || <Skeleton />}</p>
+              <img src={post.img || <Skeleton width={200} height={150}/>} alt="" /> 
+              <p className='date'>Date: {post.date || <Skeleton count={1} />}</p>
               {/* <HandlePost/> */}
-              <h1>{post.title || <Skeleton />}</h1>
-              <ShortenedText text={post.desc || <Skeleton />} className='desc' maxLength={150}/>
+              <h1>{post.title || <Skeleton count={2}/>}</h1>
+              <ShortenedText text={post.desc || <Skeleton count={3} />} className='desc' maxLength={150}/>
               <div className='link-container'>
               <Link to={`/singlePost/${post._id}`} className='link'>
                  <p>Read More...</p>

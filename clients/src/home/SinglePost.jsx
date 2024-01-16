@@ -34,7 +34,7 @@ const SinglePost = () => {
   console.log(post);
   if (!post) {
     // You can render a loading spinner or message while waiting for the data
-    return null;
+    return <p>Loading...</p>;
   }
 
   return (

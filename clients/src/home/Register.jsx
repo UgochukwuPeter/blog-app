@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './register.scss';
-import Login from './Login';
+// import Login from './Login';
 import { Link, redirect } from 'react-router-dom';
 import axios from 'axios';
 
