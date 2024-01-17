@@ -15,7 +15,7 @@ const Recent = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('posts/newest', {
+        const response = await axios.get('/posts/newest', {
           headers: {
             // If you have authentication, include the token here
             // token: "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTZiMDBhZTg1NzA3ZmEzNGU3NzUxMiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwNDM3MzIzNCwiZXhwIjoxNzA2OTY1MjM0fQ.0iO0ldQc9UTu6tYqF7Nzzm8PhhZUe6sX_BrwaxGA-e8"
