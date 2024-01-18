@@ -21,7 +21,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`/posts/find/${postId}`, {
+        const response = await axios.get(`https://mern-blog-app-7ied.onrender.com/api/posts/find/${postId}`, {
           headers: {
             token: "Bearer " + accessToken
           },

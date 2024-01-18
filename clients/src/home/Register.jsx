@@ -25,7 +25,7 @@ const handleSubmit = async (e)=>{
     if (Object.keys(validationErrors).length === 0) {
         // Your registration logic here
         try {
-          await axios.post("/auth/register", {...formData });
+          await axios.post("https://mern-blog-app-7ied.onrender.com/api/auth/register", {...formData });
           redirect('/login');
         } catch (err) {
           console.error("Registration error:", err);

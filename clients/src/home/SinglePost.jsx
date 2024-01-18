@@ -16,7 +16,7 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`/posts/find/${postId}`,
+        const response = await axios.get(`https://mern-blog-app-7ied.onrender.com/api/posts/find/${postId}`,
         {
           headers: {
             // If you have authentication, include the token here

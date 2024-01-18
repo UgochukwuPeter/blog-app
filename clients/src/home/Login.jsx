@@ -24,7 +24,7 @@ const handleSubmit =async (e)=>{
         // Your registration logic here
         try {
           // Make API request to login
-          const response =  await axios.post("/auth/login", formData);
+          const response =  await axios.post("https://mern-blog-app-7ied.onrender.com/api/auth/login", formData);
           // Store the access token in local storage
           localStorage.setItem('user', JSON.stringify(response.data));
           // Redirect to the home page after successful login

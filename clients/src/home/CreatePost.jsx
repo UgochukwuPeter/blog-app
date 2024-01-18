@@ -53,7 +53,7 @@ const CreatePost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/posts/', postData, {
+      const response = await axios.post('https://mern-blog-app-7ied.onrender.com/api/posts/', postData, {
         headers: {
           token: "Bearer " + accessToken
         },
