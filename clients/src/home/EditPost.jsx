@@ -44,7 +44,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`/posts/${postId}`, postData, {
+      const response = await axios.put(`https://mern-blog-app-7ied.onrender.com/api/posts/${postId}`, postData, {
         headers: {
           token: "Bearer " + accessToken
         },
