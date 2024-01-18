@@ -4,11 +4,14 @@ const dotenv = require('dotenv');
 const authRoute = require('./routes/auth');
 const postRoute = require("./routes/posts");
 const commentRoute = require("./routes/comments");
+const cors = require('cors');
 
 dotenv.config();
 const app = express();
+const port = process.env.PORT || 8800;
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.set("strictQuery", false);
 const mongoDB = process.env.MONGO_URL;
@@ -22,6 +25,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/comments", commentRoute);
 
-app.listen(8800, ()=>{
+app.listen(port, ()=>{
     console.log('Backend connected succcessfully');
 });

@@ -24,6 +24,7 @@ const Featured = () => {
     };
     fetchPosts();
   }, []); // Empty dependency array means this effect runs once on mount
+  console.log(post);
   return (
     <div className='featured'>
         <img src={post.img || <Skeleton width={500} height={300}/>} alt="" />
